@@ -1,11 +1,20 @@
 # AdventureWorksWebForms
-Replacing the ASP.NET postback functionality with AJAX in a WebForms project
+Replacing the ASP.NET postback system with just AJAX
 
-This is a 'Work in Progress' and also a revision exercise to re-familiarise myself with ASP.NET webforms technology
+This is a 'Work in Progress' and also a revision in ASP.NET webforms technology
 using AJAX to replace the postback system employed by ASP.NET webforms
 
-Of course there will be a limit to what I can do, since I am attempting to replacing old tools (which work fine, but I find nasty, clunky and hard to learn, like webform controls and scriptmanagers) with nice new stuff like Axios for example.
+Here I use Axios fetch API to call page methods in the code behind.
 
-Data is retrieved and sent from javascript to web methods written in C# in an aspx page, which in turn uses LINQ to connect to the Adventure Works 2014 database.
+Of course there will be a limit to what I can do, since I am attempting to mix old libraries and frameworks with newer tools like Axios for example.
+Since ASP.NET is designed around a postback mechanism, I don't recommend using this in production code, since ajax tools already exist specifically for webforms.
 
-The additional aim is revision and familiarity with JavaScript and JQuery and it's application to building a CMS front end for managing sales orders and understanding how to created business logic with JavaScript
+The web (page) methods are in C# which in turn uses LINQ to connect to the Adventure Works 2014 database.
+
+Further improvements to follow:
+* revision and familiarity with JavaScript and JQuery
+* building a front end for managing sales orders in a CMS admin website for example
+* improving the drop-down lists on the page to use localstorage to retain selected option during page requests
+* one get request to retrieve all product, category and sub-category data for the three dropdowns, then store in local storage between browser refresh
+* improved nested menu to select product instead of three separate drop-downs - less clutter in the bootstrap row styling
+* understanding the creation of business logic with JavaScript
